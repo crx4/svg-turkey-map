@@ -1,14 +1,14 @@
-const svgturkiyeharitasi = function() {
-    const element = document.querySelector('#svg-turkiye-haritasi');
-    const info = document.querySelector('.il-isimleri');
+const main = function() {
+    const element = document.getElementById('map-svg');
+    const info = document.querySelector('.province-name');
 
     element.addEventListener(
         'mouseover',
         function (event) {
-            if (event.target.tagName === 'path' && event.target.parentNode.id !== 'guney-kibris') {
+            if (event.target.tagName === 'path' && event.target.parentNode.id !== 'south-cyprus') {
                 info.innerHTML = [
                     '<div>',
-                    event.target.parentNode.getAttribute('data-iladi'),
+                    event.target.parentNode.getAttribute('data-name'),
                     '</div>'
                 ].join('');
             }
@@ -38,20 +38,20 @@ const svgturkiyeharitasi = function() {
                 const id = parent.getAttribute('id');
 
                 if (
-                    id === 'guney-kibris'
+                    id === 'south-cyprus'
                 ) {
                     return;
                 }
 
-                window.location.href = (
+                window.location.href = parent.getAttribute('data-plate-code') ? (
                     '#'
                     + id
                     + '-'
-                    + parent.getAttribute('data-plakakodu')
-                );
+                    + parent.getAttribute('data-plate-code')
+                ) : '#' + id;
             }
         }
     );
 }
 
-window.svgturkiyeharitasi = svgturkiyeharitasi;
+window.renderSvgTurkeyMap = main;

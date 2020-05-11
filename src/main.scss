@@ -1,0 +1,39 @@
+.turkey-map {
+  max-width: 1140px;
+  margin: 0 auto;
+  text-align: center;
+
+  svg {
+    width: 100%;
+    height: auto;
+
+    path {
+      cursor: pointer;
+      fill: #222;
+
+      &:hover {
+        fill: #1094F6;
+      }
+    }
+
+    #south-cyprus {
+      pointer-events: none;
+    }
+  }
+}
+
+.province-name {
+  position: absolute;
+  z-index: 2;
+
+  div {
+    font-family: 'Open Sans';
+    display: inline-block;
+    background: #1094F6;
+    color: #fff;
+    padding: 8px 16px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+}
