@@ -1,4 +1,4 @@
-const main = (elementId = 'map-svg', infoElementId = '.province-name') => {
+window.renderSvgTurkeyMap = (elementId = 'map-svg', infoElementId = '.province-name') => {
     const element = document.getElementById(elementId);
     const info = document.querySelector(infoElementId);
 
@@ -51,5 +51,3 @@ const main = (elementId = 'map-svg', infoElementId = '.province-name') => {
         }
     );
 }
-
-window.renderSvgTurkeyMap = main;
