@@ -1,6 +1,6 @@
-const main = function() {
-    const element = document.getElementById('map-svg');
-    const info = document.querySelector('.province-name');
+const main = (elementId = 'map-svg', infoElementId = '.province-name') => {
+    const element = document.getElementById(elementId);
+    const info = document.querySelector(infoElementId);
 
     element.addEventListener(
         'mouseover',
@@ -37,9 +37,7 @@ const main = function() {
                 const parent = event.target.parentNode;
                 const id = parent.getAttribute('id');
 
-                if (
-                    id === 'south-cyprus'
-                ) {
+                if (id === 'south-cyprus') {
                     return;
                 }
 
