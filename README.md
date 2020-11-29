@@ -31,7 +31,7 @@ To build this project please follow these steps:
  - Install dependencies `npm install`
  - Start watcher `npm run watch`
  
- To see the changes you need to build a server. For instance by using PHP's 
+ To see the changes you might need to build a server. For instance by using PHP's 
  built-in server: `php -S localhost:81 -t public`
  
 ## Forked From
