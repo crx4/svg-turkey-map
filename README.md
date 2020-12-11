@@ -2,6 +2,8 @@
 
 This responsive SVG Turkey Map has Istanbul divided by Asia/Europe and Cyprus. 
 
+![](src/assets/map.gif)
+
 ## Usage
 
 First copy `div.turkey-map` from `public/index.html`:
