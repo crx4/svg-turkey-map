@@ -3,21 +3,28 @@
 This responsive SVG Turkey Map has Istanbul divided by Asia/Europe and Cyprus. 
 
 ## Usage
-Please insert the style file on your page's head section:
+
+First copy `div.turkey-map` from `public/index.html`:
+```
+<div class="turkey-map">
+  <svg ...>
+    ...
+  </svg>
+</div>
+```
+Then we need the styles, either copy their minified version from inside of `public/assets/svg-turkey-map.css` or 
+insert the link tag in the head section of your document after copying the entire file to your path: 
+
 ```<link href="<your_path>/svg-turkey-map.css" rel="stylesheet" />```
 
-
-Then add script file page's body section at the very end:
+Finally the script, you can either just copy the minified version from `public/assets/svg-turkey-map.js` or
+insert a script tag in the body section at the very end. `renderSvgTurkeyMap` should be called, in order to render the map:
 ```
     <script src="<your_path>/svg-turkey-map.js"></script>
     <script>
      renderSvgTurkeyMap();
     </script>
 ```
-
-And finally copy the `<svg>` element from `index.html` to your file.
-
-
  
 ## Preview
  - [Preview](https://crx4.github.io/svg-turkey-map/public/)
