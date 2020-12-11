@@ -1,5 +1,5 @@
 let mix = require('laravel-mix');
 
-mix.js('src/svg-turkey-map.js', 'assets')
-    .sass('src/svg-turkey-map.scss', 'assets')
+mix.sass('src/svg-turkey-map.scss', 'assets')
+    .babel(['src/svg-turkey-map.js'], 'public/assets/svg-turkey-map.js')
     .setPublicPath('public');
